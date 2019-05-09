@@ -9,12 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var hangmanImageView: UIImageView!
+    var i = 0
+    let imageArray = ["hangman0", "hangman1", "hangman2", "hangman3", "hangman4", "hangman5", "hangman6"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        hangmanImageView.image = UIImage(named: imageArray[0])
+    }
+    @IBAction func button(_ sender: UIButton) {
+        i += 1
+        hangmanImageView.image = UIImage(named: imageArray[i])
+        
     }
 
-
 }
-
